@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <button mat-button class="sidenav-toggle" (click)="toggleSidenav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+    <span>Player List</span>
+    <span class="example-spacer"></span>
+    
+    <mat-form-field>
+      <mat-select [ngModel]="selectedTheme"
+                  (ngModelChange)="addNewItem($event)"
+                  name="themes">
+        <mat-option *ngFor="let t of themes" [value]="t.value">
+          {{ t.label }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openAddContactDialog()">New Contact</button>
+    <button mat-menu-item (click)="toggleTheme.emit()">Toggle theme</button>
+    <button mat-menu-item (click)="toggleDir.emit()">Toggle dir</button>
+  </mat-menu>
+</mat-toolbar>
+
+

@@ -1,0 +1,38 @@
+{
+    "users": [
+     { "id":1,
+        "name": "Nadine Angerer",
+        "avatar": "svg-1",
+        "bio": "The first goalkeeper to win the FIFA Player of the Year Award, Angerer remained an elite player to the very end, earning a place on the World Cup all-star team following her final tournament appearance in 2015.",
+        "birthDate": "1970-02-04T00:00:00",
+        "notes":[
+                 {"id":1,"title":"Pay back dinner","date":"2021-05-11T21:19:53.7191392Z"},
+                 {"id":2,"title":"Buy flowers for birthday","date":"2021-05-23T21:19:53.7191495Z"},
+                 {"id":3,"title":"Do something","date":"2021-06-02T21:19:53.7191497Z"},
+                 {"id":4,"title":"Make something","date":"2021-06-12T21:19:53.7191499Z"},
+                 {"id":5,"title":"Be something","date":"2021-06-22T21:19:53.7191501Z"}
+                ]
+      },
+      { "id": 2,
+        "name": "Kristine Lilly",
+        "avatar": "svg-2",
+        "bio":"No matter what role she filled, Lilly's track record of two World Cup wins and two Olympic gold medals underscores her importance to American success during her years in the red, white and blue.",
+        "birthDate":"1967-05-20T00:00:00",
+        "notes":[]
+      },
+      { "id": 3,
+        "name": "Christine Sinclair",
+        "avatar": "svg-3",
+        "bio":"Canada's exit from the 2019 World Cup left Sinclair just shy of the all-time mark for international goals, but it's only a matter of time before she claims that record and the recognition to go with it.",
+        "birthDate": "1975-10-11T00:00:00",
+        "notes":[]
+      },
+      { "id": 4,
+        "name": "Abby Wambach",
+        "avatar": "svg-4", 
+        "bio":"A second Olympic gold and designation as the 2012 FIFA Player of the Year cemented her standing in soccer history, and while she was more of a vocal than a physical presence at the 2015 World Cup, the U.S. victory that year was the icing on the cake for one of the sport's all-time great winners.",
+        "birthDate":"1983-03-16T00:00:00",
+        "notes":[]
+       }
+    ]
+}

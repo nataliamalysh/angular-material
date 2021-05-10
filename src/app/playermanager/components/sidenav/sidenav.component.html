@@ -1,0 +1,27 @@
+<mat-drawer-container class="sidenav-container" [ngClass]="{'neutral-theme': isNeutralTheme, 'dark-theme': isDarkTheme, 'light-theme': isLightTheme}" [dir]="dir">
+    <mat-drawer #sidenav [mode]="isScreenSmall ? 'over' : 'side'" class="side-nav mat-elevation-z10"
+      [opened]="!isScreenSmall">
+      <mat-toolbar color="primary">
+        Player List
+      </mat-toolbar>
+      <mat-nav-list>
+        <mat-list-item *ngFor="let user of users | async">
+           <a matLine [routerLink]="['/playermanager', user.id]">
+             <mat-icon svgIcon="{{user.avatar}}"></mat-icon>{{ user.name }}
+          </a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content class="sidenav-content">
+        <app-toolbar (toggleTheme)="toggleTheme()"
+                     (addNewTheme)="neutralTheme($event)" 
+                     (toggleDir)="toggleDir()" 
+                     (toggleSidenav)="sidenav.toggle()">
+        </app-toolbar>
+        <div class="wrapper">
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-drawer-content>
+
+  </mat-drawer-container>

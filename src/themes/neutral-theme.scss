@@ -1,0 +1,9 @@
+$neutral-primary: mat-palette($mat-yellow, A200, A100, A400);
+$neutral-accent: mat-palette($mat-deep-purple, 200);
+$neutral-warn: mat-palette($mat-amber, 600);
+
+$neutral-theme: mat-light-theme(
+  $neutral-primary,
+  $neutral-accent,
+  $neutral-warn
+);

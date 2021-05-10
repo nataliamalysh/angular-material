@@ -1,0 +1,63 @@
+// @import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./style-variables.scss";
+@import "./styles-reset.scss";
+
+
+@import "~@angular/material/theming";
+//include only once
+@include mat-core();
+
+@import "./themes/neutral-theme";
+@import "./styles-reset-theming.scss";
+@import "./styles-app-component-theme";
+
+//define pallettes
+$soccer-app-primary: mat-palette($mat-indigo);
+//specify darker and lighter hue
+$soccer-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$soccer-app-warn: mat-palette($mat-red);
+
+//compose theme object using all palettes
+$soccer-app-theme: mat-light-theme(
+  $soccer-app-primary,
+  $soccer-app-accent,
+  $soccer-app-warn
+);
+
+//include theme styles for core and each component used in our app
+@include angular-material-theme($soccer-app-theme);
+
+//create dark theme using new set of palettes
+.dark-theme {
+  $football-app-primary: mat-palette($mat-pink, 700);
+  $football-app-accent: mat-palette($mat-green);
+  $football-app-warn: mat-palette($mat-red);
+
+  //compose theme object using all palettes
+  $football-app-theme: mat-dark-theme(
+    $football-app-primary,
+    $football-app-accent,
+    $football-app-warn
+  );
+  @include angular-material-theme($football-app-theme);
+}
+
+@mixin custom-components-theme($theme) {
+  @include custom-styles-reset-theme($theme);
+  @include custom-app-component-theme($theme);
+}
+
+.neutral-theme {
+  @include angular-material-theme($neutral-theme);
+  // Include theme styles for your custom components
+  @include custom-components-theme($neutral-theme);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
